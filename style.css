@@ -6,7 +6,7 @@
 }
 body{
     color: #ededed;
-    background-color: rgb(1, 1, 54);
+    background-color: #081b29;
 }
 .header{
     position: fixed;
@@ -14,7 +14,7 @@ body{
     left: 0;
     width: 100%;
     padding: 20px 10%;
-    background: transparent;
+    background: #051129;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -326,10 +326,12 @@ body{
     font-weight: 600;
     animation: butIn 1s .5s  ease forwards;
     opacity: 0;
+    box-shadow: 0 0 5px #0ef,
+    0 0 25px #0ef;
 }
 
 .btn-box:hover{
-    box-shadow: 0 0 5px cyan,0 0 5px cyan,0 0 5px cyan,0 0 5px cyan;
+    box-shadow: 0 0 5px cyan,0 0 25px cyan,0 0 50px cyan,0 0 100px cyan,0 0 200px cyan;
 }
 
 @keyframes butIn {
@@ -343,7 +345,7 @@ body{
     }
 }
 
-img{
+#home-pic{
     position:relative;
     left:50%;
     top:50%;
@@ -354,4 +356,90 @@ img{
     object-fit: fill;
 }
 
+.about{
+    padding: 50px 10% 0;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 1.5rem;
+}
+#about-img{
+    padding-bottom: 20%;
+    max-width: 630px;
+    height: auto;
+    width: 100%;
+    border: 8px;
+}
+.about .left h2{
+    font-size: 60px;
+}
 
+.about .left h2 span{
+    color: #0ef;
+}
+
+.about .left h4{
+    font-size:29px;
+    font-weight: 600;
+    color: #FFF;
+    line-height: 1.7;
+    margin: 15px 0 30px;
+}
+
+.education{
+    color: aliceblue;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+}
+.sub-title{
+    text-align: center;
+    font-size: 60px;
+    padding-bottom: 70px;
+}
+.sub-title span{
+    color: #0ef;
+}
+
+.container{
+    padding: 90px;
+}
+
+.degree-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(259px,1fr));
+    grid-gap: 40px ;
+    margin-top: 50px;
+}
+
+.degree-list div{
+    background-color: transparent;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 13px;
+    border-right: 10px;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+    box-shadow: 1px 1px 20px #012290f7,1px 1px 40px #0053b8f7;
+}
+
+.degree-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.degree-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.degree-list div a{
+    text-decoration: none;
+    color: #000000;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.read{
+
+}
