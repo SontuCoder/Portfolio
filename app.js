@@ -31,3 +31,24 @@ function typeEffect() {
 
 // Start the typing effect
 typeEffect();
+
+// document.addEventListener('DOMContentLoaded', function() {
+//     const radialBars = document.querySelectorAll('.radial-bar');
+
+//     radialBars.forEach(bar => {
+//         const percentage = bar.getAttribute('data-percentage');
+//         const circle = bar.querySelector('.path');
+//         const radius = circle.r.baseVal.value;
+//         const circumference = 2 * Math.PI * radius;
+
+//         circle.style.strokeDasharray = `${circumference} ${circumference}`;
+//         circle.style.strokeDashoffset = circumference;
+
+//         const offset = circumference - (percentage / 100) * circumference;
+//         circle.style.strokeDashoffset = offset;
+
+//         // Optional: Update progress text dynamically
+//         const progressText = bar.querySelector('.progress');
+//         progressText.textContent = `${percentage}%`;
+//     });
+// });
