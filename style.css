@@ -6,18 +6,39 @@
   font-weight: 500;
   font-style: italic;
 } */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --first-color: hsl(82,60%,28%);
+    --title-color: hsl(0,0%,15%);
+    --text-color: hsl(0,0%,35%);
+    --body-color: hsl(0,0%,95%);
+    --container-color: hsl(0,0%,100%);
+
+    --body-font:"Poppins",sans-serif;
+    --h2-font-size:1.25rem;
+    --small-font-size:.813rem;
+}
+
+@media screen and (min-width:1120px) {
+    :root{
+        --h2-font-size: 1.5rem;
+        --small-font-size: .875rem;
+    }
+
+}
+
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* font-family: 'poppins','sans-serif'; */
-    font-family: "Inter", sans-serif;
 }
 
 body {
     color: #ededed;
     background-color: #081b29;
+    font-family: var(--body-font);
 }
 
 .header {
@@ -528,11 +549,11 @@ body {
 section {
     display: flex;
     flex-wrap: wrap;
+    padding: 50px 10% 0;
 }
 
 .container1 {
     width: 600px;
-    height: 500px;
     padding: 75px 90px;
     margin-left: 120px;
 }
@@ -871,4 +892,306 @@ section {
 
 .row:hover .layer {
     height: 100%;
+}
+
+
+
+@media screen and (max-width:340px) {
+    .container2{
+        margin-inline: 250px;
+    }
+    .card_data{
+        width: 250px;
+        padding: 1rem;
+    }
+}
+
+@media screen and (min-width:768px){
+    .card_container{
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 1.5rem;
+    }
+}
+
+@media screen and (min-width:1120px) {    
+    .card_container{
+        grid-template-columns: repeat(3,1fr);
+    }
+    
+    .card_img{
+        width: 348px;
+    }
+    
+    .card_data{
+        width: 316px;
+        padding-inline: 2.5rem;
+    }
+
+}
+
+.card_img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.container2{
+    display: grid;
+    place-items: center;
+    margin-inline: 1.5rem;
+}
+
+.card_container{
+    display: grid;
+    row-gap: 3.5rem;
+}
+
+.card_article{
+    position: relative;
+    overflow: hidden;
+}
+
+.card_article:hover .card_data{
+    animation: showData 1s forwards;
+    opacity: 1;
+    transition: opacity .3s;
+}
+.card_article:hover{
+    animation: removeOverflow 2s forwards;
+}
+
+.card_article:not(:hover){
+    animation: showOverflow 2s forwards;
+}
+
+.card_article:not(:hover) .card_data{
+    animation: removeData 2s forwards;
+}
+
+@keyframes showData {
+    50%{
+        transform: translateY(-10rem);
+    }
+    100%{
+        transform: translateY(-7rem);
+    }
+}
+
+@keyframes removeOverflow {
+    to{
+        overflow: initial;
+    }
+}
+
+@keyframes showOverflow {
+    0%{
+        overflow: initial;
+        pointer-events: none;
+    }
+    50%{
+        overflow: hidden;
+    }
+}
+
+@keyframes removeData {
+    0%{
+        transform: translateY(-7rem);
+    }
+    50%{
+        transform: translateY(-10rem);
+    }
+    100%{
+        transform: translateY(.5rem);
+    }
+}
+
+.card_img{
+    width: 328px;
+    border-radius: 1.5rem;
+}
+
+.card_data{
+    width: 280px;
+    background-color: var(--container-color);
+    padding: 1.5rem 2rem;
+    box-shadow: 0 8px 24px hsla(0,0%,0%,.15);
+    border-radius: 1rem;
+    position: absolute;
+    bottom: -9rem;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    opacity: 0;
+    transition: opacity 1s 1s;
+}
+
+.card_des{
+    display: block;
+    font-size: var(--small-font-size);
+    margin-bottom: .25rem;
+}
+
+.card_title{
+    font-size: var(--h2-font-size);
+    font-weight: 500;
+    color: var(--title-color);
+    margin-bottom: .75rem;
+}
+
+.card_button{
+    text-decoration: none;
+    font-size: var(--small-font-size);
+    font-weight: 500;
+    color: var(--first-color);
+}
+
+.card_button:hover{
+    text-decoration: underline;
+}
+
+.contact{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 3rem;
+    padding-left: 30px;
+    margin-top: 130px;
+}
+
+.contact-text h2{
+    font-size: 90px;
+    line-height: 1;
+    text-align: center;
+}
+
+.contact-text h2 span{
+    color: #0ef;
+}
+
+.contact-text h4{
+    margin: 15px 0;
+    color: rgb(228,228,228);
+    font-size: 20px;
+    font-weight: 600;
+
+}
+
+.contact-text p{
+    color: rgb(177,177,177);
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 2rem;
+}
+
+.contact-list{
+    margin-bottom: 3rem;
+}
+
+.contact-list li{
+    margin-bottom: 10px;
+    display: block;
+}
+
+.contact-list i{
+    display: inline-block;
+    color: #0ef;
+    font-weight: 600;
+    font-size: 20px;
+    transition: all .4s ease;
+}
+
+.contact-list li a:hovre{
+    transform: scale(1.01) translateY(-5px);
+    color: #0ef;
+}
+
+.contact-icons i{
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #0ef;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+    transition: 0;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.2s*var(--i));
+}
+
+.contact-icons i:hover{
+    background: #0ef;
+    color: #000;
+    box-shadow: 0 0 20px #0ef;
+}
+
+.contact-form form{
+    position: relative;
+}
+
+.contact-form form  input,form textarea{
+    border: none;
+    outline: none;
+    width: 90%;
+    padding: 18px;
+    background: #555557;
+    color: #000;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.contact-form textarea{
+    resize: none;
+    height: 220px;
+}
+
+.contact-form form .send{
+    display: inline-block;
+    padding: 14px 60px;
+    background: #0ef;
+    border-radius: 40px;
+    font-size: 18px;
+    color: #081b29;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px #0ef,
+    0 0 25px #0ef;
+}
+
+.contact-form form .send:hover{
+    box-shadow:  0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan;
+}
+
+.last-text p{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #051129;
+    font-weight: 300;
+    margin-top: 70px;
+}
+
+.top{
+    position: fixed;
+    bottom: 2.1rem;
+    right: 2.1rem;
+}
+
+.top i{
+    color: #000;
+    background: #0ef;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 0.5rem;
 }
