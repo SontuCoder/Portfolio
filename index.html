@@ -20,17 +20,17 @@
     <header class="header">
         <a href="#" class="logo">Portfolio</a>
         <nav class="navbar">
-            <a href="#" id="nav1">Home</a>
-            <a href="#" id="nav2">About</a>
-            <a href="#" id="nav3">Education</a>
-            <a href="#" id="nav4">Skill</a>
-            <a href="#" id="nav5">Project</a>
-            <a href="#" id="nav6">Contact</a>
+            <a href="#home" id="nav1">Home</a>
+            <a href="#about" id="nav2">About</a>
+            <a href="#education" id="nav3">Education</a>
+            <a href="#skills" id="nav4">Skill</a>
+            <a href="#projects" id="nav5">Project</a>
+            <a href="#contact" id="nav6">Contact</a>
         </nav>
     </header>
 
     <!-- home -->
-    <section class="home">
+    <section class="home" id="home">
         <div class="home-content">
             <h3>Hello, It's Me</h3>
             <h1>Subhadip Maity</h1>
@@ -51,7 +51,7 @@
     </section>
 
     <!-- About -->
-    <section class="about">
+    <section class="about" id="about">
         <div id="image">
             <img id="about-img" src="./img/IMG_20210305_193924 (1).jpg" alt="">
         </div>
@@ -70,25 +70,25 @@
     </section>
 
     <!-- Education -->
-    <section class="education">
+    <section class="education" id="education">
         <div class="container">
             <h1 class="sub-title">My <span>Education</span> Background</h1>
             <div class="degree-list">
-                <div>
+                <div id="div-left">
                     <i class='bx bxs-book-bookmark' style='color:#00eeff'></i>
                     <h2>Post Graduation</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa a maxime distinctio odit tenetur
                         exercitationem ratione praesentium aperiam vel harum!</p>
                     <a href="" class="read">Learn More</a>
                 </div>
-                <div>
+                <div id="div-mid">
                     <i class='bx bxs-graduation' style='color:#00eeff'></i>
                     <h2>Graduation</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa a maxime distinctio odit tenetur
                         exercitationem ratione praesentium aperiam vel harum!</p>
                     <a href="" class="read">Learn More</a>
                 </div>
-                <div>
+                <div id="div-right">
                     <i class='bx bxs-school' style='color:#00eeff'></i>
                     <h2>School</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa a maxime distinctio odit tenetur
@@ -101,9 +101,8 @@
 
 
     <!-- ============Skills========== -->
-    <h1 class="sub-title">My <span>Skills</span></h1>
-
-    <section>
+    <section id="skills">
+        <h1 class="sub-title">My <span>Skills</span></h1>
         <div class="container1" id="Skills">
             <h1 class="heading1">Technical Skills</h1>
             <div class="Technical-bars">
@@ -205,9 +204,8 @@
 
 
     <!-- ============Projects========== -->
-    <h1 class="sub-title">My <span>Projrcts</span></h1>
-
-    <section>
+    <section id="projects">
+        <h1 class="sub-title">My <span>Projrcts</span></h1>
     <div class="container2">
         <div class="card_container">
             <article class="card_article">
@@ -237,9 +235,10 @@
         </div>
     </div>
 </section>
-<section>
+
+<section id="contact">
     <div class="contact-text">
-        <h2>Contact<span>Me</span></h2>
+        <h2>Contact <span>Me</span></h2>
         <h4>Let's work  Together</h4>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis consequuntur molestiae, unde obcaecati eos qui laborum ullam dicta. Modi quam ratione laborum sint fugiat illum, repellendus assumenda magnam consequuntur nobis praesentium optio voluptatum quidem reprehenderit sapiente eum eligendi a veniam atque cum iste? Nihil esse obcaecati delectus a iure accusamus.</p>
         <div class="contact-list">
@@ -247,7 +246,7 @@
             <li><i class="bx bxs-phone"></i>+91 89275 68913</li>
         </div>
         <div class="contact-icons">
-            <a href=""><i class="bx bxl-facebook"></i></a>
+            <a href=""><i class="bx bxl-facebook "></i></a>
             <a href=""><i class="bx bxl-instagram"></i></a>
             <a href=""><i class="bx bxl-linkedin"></i></a>
             <a href=""><i class="bx bxl-github"></i></a>
@@ -259,7 +258,7 @@
             <input type="email" placeholder="Enter Your Email" required>
             <input type="number" min="0000000000" max="9999999999" placeholder="Enter Your Phone Number" required>
             <textarea name="" id="" cols="40" rows="10" placeholder="Enter Your Message"></textarea>
-            <input type="submit" value="submit" class="send">
+            <input type="submit" value="Submit" class="send">
         </form>
     </div>
 </section>

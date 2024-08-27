@@ -13,7 +13,7 @@ function typeEffect() {
             charIndex++;
         } else {
             isAdding = false;
-            setTimeout(typeEffect, 1000); // Pause before removing
+            setTimeout(typeEffect, 1000); 
             return;
         }
     } else {
@@ -22,33 +22,11 @@ function typeEffect() {
             charIndex--;
         } else {
             isAdding = true;
-            textIndex = (textIndex + 1) % texts.length; // Move to the next text
+            textIndex = (textIndex + 1) % texts.length; 
         }
     }
 
-    setTimeout(typeEffect, 100); // Speed of typing/removing
+    setTimeout(typeEffect, 100); 
 }
 
-// Start the typing effect
 typeEffect();
-
-// document.addEventListener('DOMContentLoaded', function() {
-//     const radialBars = document.querySelectorAll('.radial-bar');
-
-//     radialBars.forEach(bar => {
-//         const percentage = bar.getAttribute('data-percentage');
-//         const circle = bar.querySelector('.path');
-//         const radius = circle.r.baseVal.value;
-//         const circumference = 2 * Math.PI * radius;
-
-//         circle.style.strokeDasharray = `${circumference} ${circumference}`;
-//         circle.style.strokeDashoffset = circumference;
-
-//         const offset = circumference - (percentage / 100) * circumference;
-//         circle.style.strokeDashoffset = offset;
-
-//         // Optional: Update progress text dynamically
-//         const progressText = bar.querySelector('.progress');
-//         progressText.textContent = `${percentage}%`;
-//     });
-// });
