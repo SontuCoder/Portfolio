@@ -30,3 +30,16 @@ function typeEffect() {
 }
 
 typeEffect();
+
+let navbar = document.getElementById("navbar");
+let icon =document.getElementById("manuIcon");
+navbar.style.maxHeight="37.6px";
+function toggleMenu(){
+    if(navbar.style.maxHeight=="37.6px"){
+        navbar.style.maxHeight="350px";
+        icon.style.rotate="-90deg"
+    } else {
+        navbar.style.maxHeight="37.6px";
+        icon.style.rotate="0deg"
+    }
+}
