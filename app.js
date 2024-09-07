@@ -1,5 +1,5 @@
 const typingElement = document.getElementById('text');
-const texts = ["Hello, World!", "Welcome to My Website", "Enjoy Your Stay!"]; 
+const texts = ["FrontEnd Developer", "Beginner","Web Designer"]; 
 let textIndex = 0;
 let charIndex = 0;
 let isAdding = true;

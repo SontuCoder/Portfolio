@@ -991,7 +991,7 @@ section {
 .card_container {
     display: flex;
     justify-content: space-evenly;
-    row-gap: 3.5rem;
+    gap: 3.5rem;
     flex-wrap: wrap;
 }
 
