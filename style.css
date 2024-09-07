@@ -34,9 +34,9 @@ body {
     color: #ededed;
     background-color: #081b29;
     font-family: var(--body-font);
-    /* display: flex;
+    display: flex;
     flex-direction: column;
-    align-items: center; */
+    align-items: center;
 }
 
 .header {
@@ -568,11 +568,11 @@ body {
     padding: 12px 20px;
     background: #0ef;
     border-radius: 40px;
-    font-size: 16px;
+    font-size: 20px;
     color: #081b29;
     letter-spacing: 1px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
     opacity: 0;
     animation: slideTop1 1s ease forwards;
     animation-duration: 2s;
@@ -594,6 +594,15 @@ section {
 
 }
 
+#skills {
+    display: grid;
+    grid-template-areas:
+        'header header'
+        'Technical-bars radial-barst';
+    /* gap: 10px; */
+    
+}
+
 #skills h1 {
     grid-area: header;
 }
@@ -606,13 +615,6 @@ section {
     grid-area: radial-bars;
 }
 
-#skills {
-    display: grid;
-    grid-template-areas:
-        'header header'
-        'Technical-bars radial-barst';
-    gap: 10px;
-}
 
 .container1 {
     width: 500px;
@@ -990,6 +992,7 @@ section {
     display: flex;
     justify-content: space-evenly;
     row-gap: 3.5rem;
+    flex-wrap: wrap;
 }
 
 .card_article {
@@ -1200,6 +1203,9 @@ section {
 
 .contact-form form {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .contact-form form input,
@@ -1209,7 +1215,7 @@ form textarea {
     width: 90%;
     padding: 18px;
     background: #555557;
-    color: #000;
+    color: #FFF;
     font-size: 1rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
@@ -1219,6 +1225,7 @@ form textarea {
 .contact-form textarea {
     resize: none;
     height: 220px;
+    color: #FFF;
 }
 
 .contact-form form .send {
@@ -1242,6 +1249,9 @@ form textarea {
     box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan;
 }
 
+.last-text{
+    width: 100%;
+}
 .last-text p {
     width: 100%;
     text-align: center;
@@ -1255,6 +1265,7 @@ form textarea {
     position: fixed;
     bottom: 2.1rem;
     right: 2.1rem;
+    z-index: 1000;
 }
 
 .top i {
@@ -1266,7 +1277,7 @@ form textarea {
     border-radius: 0.5rem;
 }
 
-@media screen and (max-width:340px) {
+@media screen and (max-width:375px) {
     .container2 {
         margin-inline: 250px;
     }
@@ -1275,9 +1286,23 @@ form textarea {
         width: 250px;
         padding: 1rem;
     }
+    .degree{
+        width: 90%;
+    }
+    .sub-title{
+        font-size: 30px;
+    }
+    
+    .home-content .btn-box{
+        margin-top: 20px;
+    }
+    
 }
 
 @media screen and (max-width: 875px) {
+    section{
+        padding: 10px 0;
+    }
     .navbar{
         position: absolute;
         top:60px;
@@ -1298,6 +1323,14 @@ form textarea {
     .manuIcon{
         display: block;
         transition: all 0.5s;
+    }
+
+    .home-sci a{
+        margin: 10px 10%;
+    }
+
+    .sub-title{
+        font-size: 40px;
     }
     
     .home {
@@ -1334,12 +1367,32 @@ form textarea {
             'header'
             'Technical-bars'
             'radial-barst';
+        padding-left: 0;
+        gap: 0;
+    }
+    .container1{
+        width: 98vw;
     }
 
     .card_container {
         grid-template-columns: repeat(2, 1fr);
         column-gap: 1.5rem;
     }
+    #contact{
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact-text{
+        width: 90%;
+    }
+    .contact-text h2{
+        font-size: 36px;
+    }
+    .contact-form{
+        width: 90%;
+    }
+
+
 }
 
 
