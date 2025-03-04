@@ -2,7 +2,7 @@
 <img src="./img/logo.jpg" height="40px"> By, Subhadip Maity
 
 ## Description
-A simple Portfolio project with wonderfull animations and transitions. It is a best projects for any beggener. 
+A simple portfolio project showcasing beautiful animations and smooth transitions. This project is ideal for beginners looking to build their first portfolio website.
 
 ## Table of Contents
 - [Installation](#installation)
@@ -20,13 +20,13 @@ A simple Portfolio project with wonderfull animations and transitions. It is a b
     ```
 
 ## Usage
-You can use it as your Profesional portfolio.
+You can customize this portfolio to represent your professional projects, skills, and personal information.
 
 ## Features
-- Responsive
-- Wonderfull Animation
-- Loding animation
-- Contact form submit  
+- Fully responsive design
+- Smooth animations and transitions
+- Loading animations
+- Contact form submission
 
 ## Technologies Used
 - HTML5
@@ -42,7 +42,8 @@ You can use it as your Profesional portfolio.
 
 
 ## Notes
-Feel free to design CSS according your choice.
+Feel free to modify the CSS to suit your design preferences.
+
 
 ## Contact
 - Email: [subhadipmaity792@gmail.com](mailto:subhadipmaity792@gmail.com)
