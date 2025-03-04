@@ -354,6 +354,7 @@ body {
     }
 }
 
+
 .btn-box {
     display: inline-block;
     padding: 12px 28px;
@@ -1278,6 +1279,7 @@ form textarea {
 }
 
 @media screen and (max-width:375px) {
+    
     .container2 {
         margin-inline: 250px;
     }
@@ -1300,6 +1302,9 @@ form textarea {
 }
 
 @media screen and (max-width: 875px) {
+    .home-content p{
+        text-align: justify;
+    }
     section{
         padding: 10px 0;
     }
@@ -1391,8 +1396,6 @@ form textarea {
     .contact-form{
         width: 90%;
     }
-
-
 }
 
 
@@ -1416,5 +1419,4 @@ form textarea {
         padding-inline: 2.5rem;
     }
     
-
 }
